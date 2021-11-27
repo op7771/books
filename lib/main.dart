@@ -75,15 +75,29 @@ class ExplicitListConstructing extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(8),
       children: const [
-        Text('랭킹'),
-        Text('랭킹'),
-        Text('랭킹'),
-        Text('랭킹'),
-        Center(child: Text('랭킹')),
-        Center(child: Text('랭킹')),
-        Center(child: Text('랭킹')),
-        Center(child: Text('랭킹')),
-      ],
+        Card(
+          child: ListTile(
+            leading: FlutterLogo(size: 72.0),
+            title: Text('雨ニモマケズ'),
+            subtitle: Text(
+                '宮沢 賢治\n筑摩書房'
+            ),
+            trailing: Icon(Icons.more_vert),
+            isThreeLine: true,
+          ),
+        ),
+        Card(
+          child: ListTile(
+            leading: FlutterLogo(size: 72.0),
+            title: Text('Three-line ListTile'),
+            subtitle: Text(
+                'A sufficiently long subtitle warrants three lines.'
+            ),
+            trailing: Icon(Icons.more_vert),
+            isThreeLine: true,
+          ),
+        ),
+    ],
     );
   }
 }
